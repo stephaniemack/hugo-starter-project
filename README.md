@@ -11,7 +11,8 @@ The [Hugo](https://gohugo.io/) boilerplate I use for projects.
 ## Features
 Hugo Starter Project provides the following features out of the box:
 
-* Pre configured support for Hugo Pipes, with SASS and Autoprefixer
+* Pre configured support for Hugo Pipes and Autoprefixer
+* Automated SVG sprite build
 * Environment driven `robots.txt` file (disallows robots on everything other than production)
 * Base HTML templates with easy customisation/extension
 * [Configuration](/netlify.toml) for Netlify deployments
