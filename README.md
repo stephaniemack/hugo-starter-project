@@ -1,13 +1,14 @@
 # Hugo Starter Project
+The [Hugo](https://gohugo.io/) boilerplate I use for projects.
 
-The [Hugo](https://gohugo.io/) boilerplate we use for our projects.
 
 **Disclaimer** - This boilerplate has been heavily integrated with [Netlify](https://www.netlify.com/), and therefore many features are specific to the Netlify platform and may not work with other hosting providers.
 
+
 **Disclaimer** - Hugo Starter Project is a boilerplate (starter kit) for bespoke Hugo projects. It's not a Hugo theme and cannot be placed inside the `/themes` directory. Check the [theme](#themes) docs for more information.
 
-## Features
 
+## Features
 Hugo Starter Project provides the following features out of the box:
 
 * Pre configured support for Hugo Pipes, with SASS and Autoprefixer
@@ -17,12 +18,12 @@ Hugo Starter Project provides the following features out of the box:
 * [Better defaults](#security-headers) for configuring HTTPS
 * [Better redirects](#redirects) with Netlify instead of `<meta http-equiv="refresh">`
 
-## Prerequisite
 
+## Prerequisite
 Hugo Starter Project does not include a copy of the `hugo` binary. You will need to [install Hugo](https://gohugo.io/getting-started/installing/) first you can run any of the [commands](#available-commands) mentioned below. It does however include a Hugo version number as part of the `netlify.toml` file to specify the version of Hugo to use when building on Netlify.
 
-## Getting Started
 
+## Getting Started
 To get started, you can either clone the repository, or deploy straight to [Netlify](#deploy-to-netlify). Then run the following from the project root:
 
 ```
@@ -30,16 +31,16 @@ npm install
 npm run server
 ```
 
-### Available Commands
 
+### Available Commands
 There are 3 commands available:
 
 * `npm run build` - Builds assets (sass, js, fonts, images) and runs `hugo`
 * `npm run build:preview` - The same as `build`, but runs `hugo --buildDrafts --buildFuture`
 * `npm run server` - Runs BrowserSync and watches for changes, running `build` when changes are detected
 
-## Robots.txt
 
+## Robots.txt
 A default robots.txt can be found at `/layouts/robots.txt` which is configured to disallow crawlers when the `HUGO_ENV` environment variable is **not** set to `"production"`.
 
 The default behaviour is to disallow search engines on "branch" deployments. If you're using split testing, you will need to modify the default robots.txt template to ensure your branch deployments can be indexed.
@@ -138,10 +139,11 @@ If you wish the develop your site as a theme inside Hugo Starter Project, you ca
 │ package.json
 ```
 
+
 ## Deploy to Netlify
 You can deploy directly to Netlify using this button:
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/indigotree/Hugo Starter Project)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/jonyablonski/hugo-starter-project)
 
 
 ## License
