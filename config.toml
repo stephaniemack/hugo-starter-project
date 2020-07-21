@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "en-gb"
-title = "{TITLE}"
+title = "Hugo Starter Project"
 
 enableRobotsTXT = true
 disableAliases = true
@@ -31,3 +31,6 @@ baseName = "_headers"
 isPlainText = true
 notAlternative = true
 
+# Configure Markup
+[markup.goldmark.renderer]
+  unsafe = true

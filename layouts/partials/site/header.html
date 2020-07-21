@@ -1,5 +1,9 @@
-<header class="site-header" role="banner">
+<header class="header" role="banner">
 
-    <strong><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></strong>
+  <!-- Site Logo/Title -->
+  <a href="{{ .Site.BaseURL }}" class="header__title" data-page-link>{{ .Site.Title }}</a>
+
+  <!-- Site Navigation -->
+  {{ partial "site/navigation" . }}
     
 </header>

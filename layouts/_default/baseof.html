@@ -1,33 +1,46 @@
 <!doctype html>
 <html lang="{{ .Site.LanguageCode | default "en" }}">
-    <head>
+	<head>
+		{{ block "site/meta" . }}{{ partial "site/meta.html" . }}{{ end }}
 
-        {{ block "site/meta" . }}{{ partial "site/meta.html" . }}{{ end }}
+		<title>{{ block "title" . }}
+			{{- with .Title }}{{ . }} | {{ end }}{{ .Site.Title -}}
+		{{ end }}</title>
 
-        <title>{{ block "title" . }}
-            {{- with .Title }}{{ . }} | {{ end }}{{ .Site.Title -}}
-        {{ end }}</title>
+		{{ range .AlternativeOutputFormats }}
+			<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+		{{ end }}
 
-        {{ range .AlternativeOutputFormats }}
-            <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
-        {{ end }}
+		<!-- Styles -->
+		{{ block "site/styles" . }}{{ partial "site/styles.html" . }}{{ end }}
+	</head>
+	<body>
 
-        {{ block "site/styles" . }}{{ partial "site/styles.html" . }}{{ end }}
+    <!-- SVG Sprite -->
+    <div class="hidden">
+      {{ readFile "static/sprite.svg" | safeHTML }}
+    </div>
 
-    </head>
-    <body>
+    <!-- Skip to Content -->
+    <a class="visually-hidden" href="#content">Skip to main content</a>
 
-        {{ block "header" . }}{{ partial "site/header.html" . }}{{ end }}
+    <!-- Site Container -->
+    <div class="container">
 
-        <main class="site-main" role="main">
+      <!-- Header -->
+      {{ block "header" . }}{{ partial "site/header.html" . }}{{ end }}
 
-            {{ block "main" . }}{{ end }}
+      <!-- Main -->
+      <main id="content" class="site-main" role="main">
+        {{ block "main" . }}{{ end }}
+      </main>
 
-        </main>
+      <!-- Footer -->
+      {{ block "footer" . }}{{ partial "site/footer.html" . }}{{ end }}
 
-        {{ block "footer" . }}{{ partial "site/footer.html" . }}{{ end }}
+    </div>
 
-        {{ block "site/scripts" . }}{{ partial "site/scripts.html" . }}{{ end }}
-
-    </body>
+		<!-- Scripts -->
+		{{ block "site/scripts" . }}{{ partial "site/scripts.html" . }}{{ end }}
+	</body>
 </html>

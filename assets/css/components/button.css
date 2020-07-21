@@ -1,0 +1,18 @@
+.button {
+  position: relative;
+  display: inline-block;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  font-size: 100%;
+  padding: var(--base-spacing) calc(var(--base-spacing) * 2);
+  color: var(--base-font-color);
+  border: transparent;
+  background: var(--base-accent-color);
+  box-shadow: var(--base-box-shadow);
+  text-decoration: none;
+  border-radius: var(--base-border-radius);
+  overflow: hidden;
+}
