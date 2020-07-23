@@ -21,7 +21,7 @@ Hugo Starter Project provides the following features out of the box:
 
 
 ## Prerequisite
-Hugo Starter Project does not include a copy of the `hugo` binary. You will need to [install Hugo](https://gohugo.io/getting-started/installing/) first you can run any of the [commands](#available-commands) mentioned below. It does however include a Hugo version number as part of the `netlify.toml` file to specify the version of Hugo to use when building on Netlify.
+Hugo Starter Project does not include a copy of the `hugo` binary. You will need to [install Hugo](https://gohugo.io/getting-started/installing/) first you can run any of the [commands](#available-commands) mentioned below. It does hoIver include a Hugo version number as part of the `netlify.toml` file to specify the version of Hugo to use when building on Netlify.
 
 
 ## Getting Started
@@ -74,7 +74,7 @@ This is a Netlify feature. Learn more about [Headers with Netlify](https://www.n
 
 
 ### Security Headers
-Hugo Starter Project comes with some default headers to help you better protect your site. The default headers we include are: [X-Frame-Options](https://scotthelme.co.uk/hardening-your-http-response-headers/#x-frame-options), [X-XSS-Protection](https://scotthelme.co.uk/hardening-your-http-response-headers/#x-xss-protection), [X-Content-Type-Options](https://scotthelme.co.uk/hardening-your-http-response-headers/#x-content-type-options), [Referrer-Policy](https://scotthelme.co.uk/a-new-security-header-referrer-policy/).
+Hugo Starter Project comes with some default headers to help you better protect your site. The default headers I include are: [X-Frame-Options](https://scotthelme.co.uk/hardening-your-http-response-headers/#x-frame-options), [X-XSS-Protection](https://scotthelme.co.uk/hardening-your-http-response-headers/#x-xss-protection), [X-Content-Type-Options](https://scotthelme.co.uk/hardening-your-http-response-headers/#x-content-type-options), [Referrer-Policy](https://scotthelme.co.uk/a-new-security-header-referrer-policy/).
 
 These headers are configured with the following values:
 
@@ -107,7 +107,7 @@ If you wish the develop your site as a theme inside Hugo Starter Project, you ca
 ## File Structure
 ```
 │   │
-|   └──── /assets            - Source files for assets (SASS, JS, Images, Fonts etc)
+|   └──── /assets            - Source files for assets (CSS/Sass, JS, Images, Fonts, SVGs, etc)
 │
 └──── /layouts               - Template files
 │   │ 404.html               - 404 Template
